@@ -1,0 +1,29 @@
+package com.wang.cn.fragmetn;
+
+import android.os.Bundle;
+import android.view.View;
+
+import com.example.every_text.view.LoadingPager.LoadResult;
+import com.wang.cn.R;
+import com.wang.cn.base.BaseFragment;
+import com.wang.cn.utils.UIUtils;
+
+public class HomeFragment extends BaseFragment {
+
+	// 当Fragment挂载的activity创建的时候调用
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		show();
+	}
+	@Override
+	public View createSuccessView() {
+
+		return UIUtils.inflate(R.layout.activity_main);
+	}
+	@Override
+	public LoadResult load() {
+		return LoadResult.SUCCESS;
+	}
+
+}
